@@ -16,7 +16,7 @@ syntax enable
 " Theme
 if has('gui_running')
 	set background=light
-	set lines=36 columns=83
+	set lines=36 columns=84
 else
 	set background=dark
 endif
