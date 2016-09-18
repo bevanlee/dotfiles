@@ -7,6 +7,12 @@ set number
 set autoindent
 set hlsearch
 set cursorline
+set tabstop=4
+
+" Backups and swap files
+set backup
+set backupdir=~/.vim/temp
+set dir=~/.vim/temp
 
 " Kill this shit keybinding
 map Q gq
