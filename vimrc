@@ -7,7 +7,10 @@ set number
 set autoindent
 set hlsearch
 set cursorline
-set tabstop=4
+
+" Indentation with hard-tabs
+set shiftwidth=8
+set tabstop=8
 
 " Backups and swap files
 set backup
