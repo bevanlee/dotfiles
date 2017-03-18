@@ -7,8 +7,10 @@ set number
 set autoindent
 set hlsearch
 set cursorline
-set tabstop=4
-set shiftwidth=4
+
+" Indentation with hard-tabs
+set shiftwidth=8
+set tabstop=8
 
 " Search upwards of the current directory until finding a tags file
 set tags=./tags;/
@@ -20,6 +22,24 @@ set dir=~/.vim/temp
 
 " Kill this shit keybinding
 map Q gq
+
+" cscope stuff
+if has('cscope')
+  set cscopetag cscopeverbose
+
+  if has('quickfix')
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+  endif
+
+  cnoreabbrev csa cs add
+  cnoreabbrev csf cs find
+  cnoreabbrev csk cs kill
+  cnoreabbrev csr cs reset
+  cnoreabbrev css cs show
+  cnoreabbrev csh cs help
+
+  command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
+endif
 
 syntax enable
 
