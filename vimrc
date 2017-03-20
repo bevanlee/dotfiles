@@ -56,3 +56,4 @@ call togglebg#map("<F5>")
 " Automatic line breaks when writing in plaintext
 filetype plugin indent on
 autocmd FileType text setlocal textwidth=78
+autocmd FileType text setlocal spell
