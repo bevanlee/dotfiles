@@ -43,16 +43,16 @@ map Q gq
 
 " ================== Relative Numbering ======================================
 " set the below switch if for some reason we start in the wrong mode
-"set rnu
+set rnu
 
 " Toggle relative numbering functions 
 function! ToggleNumbersOn()
-    set nu!
-    set rnu
+	set nu!
+	set rnu
 endfunction
 function! ToggleRelativeOn()
-    set rnu!
-    set nu
+	set rnu!
+	set nu
 endfunction
 
 " set to absolute on loss of focus or insert mode
@@ -93,6 +93,11 @@ else
 endif
 colorscheme solarized
 call togglebg#map("<F5>")
+
+" highlight column boundary
+if exists('+colorcolumn')
+	set colorcolumn=78
+endif
 
 
 " ================== Airline =================================================
