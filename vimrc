@@ -25,9 +25,11 @@ set autoindent
 set hlsearch
 set cursorline
 
-" Indentation with hard-tabs
+" Indentation spacing
 set shiftwidth=8
 set tabstop=8
+" Set switch for soft-tabs
+set expandtab
 
 " Search upwards of the current directory until finding a tags file
 set tags=./tags;/
@@ -43,7 +45,7 @@ map Q gq
 
 " ================== Relative Numbering ======================================
 " set the below switch if for some reason we start in the wrong mode
-set rnu
+"set rnu
 
 " Toggle relative numbering functions 
 function! ToggleNumbersOn()
@@ -88,6 +90,7 @@ nnoremap <F6> :call ToggleRelativeOn()<CR>
 if has('gui_running')
 	set background=light
 	set lines=36 columns=84
+        set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
 else
 	set background=dark
 endif
